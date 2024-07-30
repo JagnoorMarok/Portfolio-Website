@@ -1,0 +1,41 @@
+{% extends "portfolio/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<div class="body-title">
+<div class="Page-title">
+  <p>About</p>
+</div>
+<div class="nav-bar">
+    <ul>
+      <div class="navbar-item">
+        <li><a href="{% url 'home' %}">About</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'resume' %}">Resume</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </div>  
+  </ul>
+</div>
+</div>
+<div class="content">
+<div class="content-body">
+    <p>I am a passionate and driven individual dedicated to advancing my academic journey and exploring new technologies. Currently pursuing a B.Tech in Computer Science at Dr. B.R. Ambedkar National Institute of Technology, Jalandhar, I am deeply engaged in areas such as web development, UI/UX design, data structures, and machine learning. My aspiration is to achieve excellence in computer science, driven by a commitment to continuous learning and growth.
+    </p>
+    <hr>
+    <div class="scroll-container">
+      <img src="{% static 'portfolio/my-avatar.png' %}" alt="Cinque Terre">
+      <img src="{% static 'portfolio/my-avatar.png' %}" alt="Forest">
+      <img src="{% static 'portfolio/my-avatar.png' %}" alt="Northern Lights">
+      <img src="{% static 'portfolio/my-avatar.png' %}" alt="Mountains">
+    </div>
+    <hr>
+</div>
+</div>
+{% endblock %}

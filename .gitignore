@@ -1,0 +1,9 @@
+# environment variables
+.env
+
+# SQLite database file
+db.sqlite3
+
+# Ignore migration files except __init__.py
+*/migrations/*.py
+!*/migrations/__init__.py

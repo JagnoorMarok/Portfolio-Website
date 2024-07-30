@@ -1,0 +1,346 @@
+
+.row{
+    padding-top: 20px;
+    justify-content: center;
+    background-color: #101010;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.main-body {
+    
+    background-color: #393939;
+
+    margin: 20px;
+    border-radius: 25px;
+    border: 2px solid antiquewhite;
+    width: 65%;
+    max-width: 900px;
+    min-width: 800px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #393939;
+    border: 2px solid antiquewhite;
+    margin: 20px;
+    border-radius: 25px;
+    width: 25%;
+    max-width: 400px;
+    min-width: 300px;
+    max-height: 800px;
+    text-align: center;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.image-container{
+    margin: 30px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    
+}
+
+.name-container h2{
+    color: antiquewhite;
+    margin: 30px;
+}
+.name-container a{
+    color:antiquewhite;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+.name-container hr{
+    border-color: antiquewhite;
+    width: 75%;
+    margin-top: 25px;
+}
+
+.contact-list ul{
+    list-style-type: none;
+    
+}
+
+.contact-info p{
+    padding-top: 10px;
+    padding-left: 5px;
+    margin: 2px;
+    color: antiquewhite;
+}
+.contact-info a{
+    color: antiquewhite;
+}
+
+
+.contact-item{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.icon-box{
+    padding: 10px;
+    margin-left: -16px;
+    background-color: #000;
+    color: antiquewhite;
+    border-radius: 30px;
+    
+}
+.body-title{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Page-title{
+    width: 35%;
+}
+
+.Page-title p{
+    color: antiquewhite;
+    font-size: 68px;
+    
+    
+}
+
+.nav-bar{
+     
+    background: #101010;
+    border-radius: 0px 25px 0px 25px;
+    max-height: 70px;
+    width: 65%;
+    
+}
+.nav-bar ul{
+    list-style-type: none;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+.nav-bar ul li a{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 10px;
+    
+    
+}
+
+.nav-bar ul :hover{
+    background-color: antiquewhite;
+    font-size: 32px;
+    border-radius: 2px 20px 2px 20px;
+    color: #000;
+    transition: 0.5s linear;
+    
+    
+}
+
+
+
+.content  .content-body{
+    margin: 20px;
+    text-align: left;
+    color: antiquewhite;
+    font-size: 20px;
+    
+
+}
+
+.content hr{
+    color: antiquewhite;
+    width: 75%;
+}
+.contact-form h2,.content h2{
+    background: #101010;
+    padding: 15px;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+.skill-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.skill-item {
+    color:antiquewhite;
+    background-color: rgb(0, 0, 0);
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    text-align: center;
+    width: fit-content;
+    
+    
+    
+}
+
+
+.contact {padding: 20px;}
+
+
+.mapbox {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid antiquewhite;
+    overflow: hidden;
+  }
+  
+  .mapbox figure { height: 100%; }
+  
+  .mapbox iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(1) invert(1);
+  }
+  .contact-form{
+    text-align: left;
+
+  }
+  
+
+  div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 20px;
+    
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+
+/* Custom Scrollbar for Webkit Browsers */
+
+.scroll-container::-webkit-scrollbar {
+    height: 12px; /* Change the height for horizontal scrollbar */
+    
+  }
+
+  .scroll-container::-webkit-scrollbar-track {
+    background: #333; 
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #000; 
+    border-radius: 6px; /* Makes the thumb rounded */
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  
+
+  /* Custom Scrollbar for Firefox */
+  .scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #333;
+  }
+  
+
+  
+
+  .contact-form hr{
+    border-color: antiquewhite;
+    width: 10%;
+  }
+  .content-body hr{
+    border-color: antiquewhite;
+    width: 10%;
+  }
+  .experience-item p,.education-item p{
+    font-size: 18px;
+    color: #888888;
+    font-weight: bold;
+  }
+  
+  
+  .contact-form input  {
+    padding: 15px;
+    margin: 0px 0px 15px 5px;
+    width: 49%;
+    border-color: antiquewhite;
+    background-color: #101010;
+    border-radius: 20px;
+    color: antiquewhite;
+  }
+  .contact-form textarea{
+    padding: 15px;
+    margin: 0px 0px 15px 5px;
+    width: 100%;
+    height: 200px;
+    border-color: antiquewhite;
+    background-color: #101010;
+    border-radius: 20px;
+    color: antiquewhite;
+
+  }
+  .contact-form button{
+    padding: 15px;
+    margin: 10px 0px 15px 0px;
+    color: antiquewhite;
+    background-color: #101010;
+    border-radius: 20px;
+  }
+
+/* Notification styles  on contact page --------------------------------------------------------------*/
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .notification.error {
+    background-color: #dc3545;
+  }
+/*-----------------------------------------------------------------------------------------------*/
+  .image img {
+    width: 50%;
+    filter: grayscale(1);
+    border-radius: 20px;
+  }
+
+  .image{
+    text-align: center;
+  }
+  
+  .image :hover{
+    filter: none;
+    transition: 0.5s linear;
+  }
+  
+  
+  
+  
+  

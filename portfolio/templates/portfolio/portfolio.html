@@ -1,0 +1,78 @@
+{% extends "portfolio/layout.html" %}
+
+{% block body %}
+<div class="body-title">
+<div class="Page-title">
+  <p>Portfolio</p>
+</div>
+<div class="nav-bar">
+    <ul>
+      <div class="navbar-item">
+        <li><a href="{% url 'home' %}">About</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'resume' %}">Resume</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </div>  
+  </ul>
+</div>
+</div>
+<div class="content">
+<div class="content-body">
+    <div id="portfolio">
+        {% for image in images %}
+            <div class="image">
+                <img src="{{ image.image_url }}" alt="{{ image.title }}">
+                <p>{{ image.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div id="loader" style="display: none;">Loading...</div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let page = 1;
+        const portfolio = $('#portfolio');
+        const loader = $('#loader');
+
+        function loadMoreImages() {
+            loader.show();
+            $.ajax({
+                url: '{% url "load_more_images" %}',
+                data: {
+                    'page': page + 1,
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.images.length > 0) {
+                        data.images.forEach(function (image) {
+                            portfolio.append(`
+                                <div class="image">
+                                    <img src="${image.image_url}" alt="${image.title}">
+                                    <p>${image.title}</p>
+                                </div>
+                            `);
+                        });
+                        page += 1;
+                        loader.hide();
+                    } else {
+                        loader.text('No more images to load');
+                    }
+                }
+            });
+        }
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+                loadMoreImages();
+            }
+        });
+    </script>
+</div>
+</div>
+{% endblock %}

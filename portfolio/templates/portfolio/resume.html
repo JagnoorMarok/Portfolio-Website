@@ -1,0 +1,78 @@
+{% extends "portfolio/layout.html" %}
+
+{% block body %}
+<div class="body-title">
+<div class="Page-title">
+  <p>Resume</p>
+</div>
+<div class="nav-bar">
+    <ul>
+      <div class="navbar-item">
+        <li><a href="{% url 'home' %}">About</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'resume' %}">Resume</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+      </div>
+      <div class="navbar-item">
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </div>  
+  </ul>
+</div>
+</div>
+<div class="content">
+<div class="content-body">
+    <div class="education-container">
+        <h2>Education</h2>
+        <hr>
+        {% for edu in education %}
+            <div class="education-item">
+                <h5>{{ edu.institution }} <i>({{ edu.start_year }} - {{ edu.end_year }})</i></h5>
+                <p>{{ edu.details|safe }}</p>
+            </div>
+        {% endfor %}
+        <hr>
+    </div>
+    <div class="experience-container">
+        <h2>Experience</h2>
+        <hr>
+        {% for experience in experiences %}
+            <div class="experience-item">
+                <h5>{{ experience.title }} - {{ experience.organization }} <i>({{ experience.start_date }} - {{ experience.end_date }})</i></h5>
+                <p>{{ experience.description|safe }}</p>
+            </div>
+            <hr>
+        {% endfor %}
+
+        <h2>Positional Responsibilities</h2>
+        <hr>
+        {% for responsibility in responsibilities %}
+            <div class="experience-item">
+                <h5>{{ responsibility.title }} - {{ responsibility.organization }} <i>({{ responsibility.start_date }} - {{ responsibility.end_date }})</i></h5>
+                <p>{{ responsibility.description|safe }}</p>
+            </div>
+        {% endfor %}
+        <hr>
+    </div>
+    <div class="skill-container">
+        <h2>Skills</h2>
+        <hr>
+        {% for category, skills in skills_by_category.items %}
+            <div class="skill-set">
+                <h5>{{ category }}:</h5>
+                <div class="skill-list">
+                    {% for skill in skills %}
+                        <div class="skill-item">
+                            {{ skill }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+<hr>
+</div>
+</div>
+{% endblock %}
