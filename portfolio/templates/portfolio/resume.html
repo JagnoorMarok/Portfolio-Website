@@ -1,4 +1,5 @@
 {% extends "portfolio/layout.html" %}
+{% load static %}
 
 {% block body %}
 <div class="body-title">
@@ -71,7 +72,13 @@
                 </div>
             </div>
         {% endfor %}
-    </div>
+    </div> 
+<hr>
+<div class="download-button">
+    <a href="{% static 'portfolio\Jagnoor Singh Marok.pdf' %}" download="Jagnoor Singh Marok.pdf">
+        <button type="button">Download Resume</button>
+    </a>
+</div>
 <hr>
 </div>
 </div>
